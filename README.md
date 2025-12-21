@@ -48,7 +48,8 @@ npm run lint    # ESLint
 | **Maturity** | Older, stable, more plugins | Newer, less ecosystem |
 | **File structure** | More config files | Simpler structure |
 
-**Main challenge:** Understanding why Vue CLI needs more configuration files (babel.config.js, jsconfig.json, vue.config.js) compared to Vite's single config file. This is because Vue CLI uses Webpack under the hood, which requires more setup for transpilation and bundling.
+**Main challenge:**
+Understanding why Vue CLI needs more configuration files (babel.config.js, jsconfig.json, vue.config.js) compared to Vite's single config file. This is because Vue CLI uses Webpack under the hood, which requires more setup for transpilation and bundling.
 
 ## Notes
 
