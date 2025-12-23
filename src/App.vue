@@ -1,24 +1,43 @@
+<!-- Template section: Defines the HTML structure and layout of the component -->
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div id="app">
+    <h1>Hello Vue!</h1>
+  </div>
 </template>
 
+<!-- Script section: Contains the component's logic, data, methods, and configuration -->
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
+// Alternative way: const app = {...}; export default app;
+// But directly using "export default" is simpler and more common
 export default {
-  name: 'App',
-  components: {
-    HelloWorld
-  }
-}
+    data() {
+        return {
+            friends: [
+                {
+                    id: 'rikuto',
+                    name: 'Rikuto Mikado',
+                    phone: '0123-45678-90',
+                    email: 'rikuto@example.com',
+                },
+                {
+                    id: 'jun',
+                    name: 'Jun Sato',
+                    phone: '0987-65432-10',
+                    email: 'jun@example.com',
+                }
+            ]
+        }
+    },
+    methods: {
+
+    },
+};
 </script>
 
+<!-- Style section: Defines the CSS styles for this component -->
 <style>
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;

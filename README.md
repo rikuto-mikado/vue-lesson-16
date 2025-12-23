@@ -34,6 +34,29 @@ npm run build   # Production build
 npm run lint    # ESLint
 ```
 
+### Component Export Patterns
+
+Two ways to export a component in `.vue` files:
+
+| Pattern | Code | Notes |
+|---------|------|-------|
+| **Direct export** | `export default { data() {...} }` | More common, simpler |
+| **Named constant** | `const app = {...};`<br>`export default app;` | Useful for reusing config |
+
+**Important:** Must use `export default` - otherwise the component won't be importable in `main.js`.
+
+```javascript
+// Wrong - not exported
+const app = { data() {...} };
+
+// Correct - exported
+export default { data() {...} };
+
+// Also correct
+const app = { data() {...} };
+export default app;
+```
+
 ## Challenges
 
 ### Vue CLI vs Vite
