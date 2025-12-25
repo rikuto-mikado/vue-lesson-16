@@ -1,8 +1,12 @@
 <!-- Template section: Defines the HTML structure and layout of the component -->
 <template>
-  <div id="app">
-    <h1>Hello Vue!</h1>
-  </div>
+  <section>
+    <h2>My Friends</h2>
+    <ul>
+      <friend-contact></friend-contact>
+      <friend-contact></friend-contact>
+    </ul>
+  </section>
 </template>
 
 <!-- Script section: Contains the component's logic, data, methods, and configuration -->
