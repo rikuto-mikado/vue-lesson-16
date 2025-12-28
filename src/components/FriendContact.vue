@@ -1,17 +1,24 @@
 <template>
   <li>
-    <h2>{{ friend.name }}</h2>
-    <button @click="toggleDetails">Show Details</button>
+    <h2>{{ name }}</h2>
+    <button @click="toggleDetails">{{ detailsVisible ? 'Hide' : 'Show' }} Details</button>
     <!-- v-if: Removes element from DOM when false. Alternative: v-show (toggles CSS display property) -->
     <ul v-if="detailsVisible">
-        <li><strong>Phone: </strong>{{ friend.phone }}</li>
-        <li><strong>Email: </strong>{{ friend.email }}</li>
+        <li><strong>Phone: </strong>{{ phoneNumber }}</li>
+        <li><strong>Email: </strong>{{ emailAdress }}</li>
     </ul>
   </li>
 </template>
 
 <script>
 export default {
+    // Array syntax for props: Simple and concise, but no type validation.
+    // Alternative: Object syntax with type checking: props: { name: String, phoneNumber: String, emailAdress: String }
+    props: [
+        'name', 
+        'phoneNumber', 
+        'emailAdress'
+    ],
     data() {
         return {
             detailsVisible: false,
@@ -26,6 +33,7 @@ export default {
     methods: {
         toggleDetails() {
             this.detailsVisible = !this.detailsVisible;
+            
         }
     }
 };
